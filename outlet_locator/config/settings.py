@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'rest_framework.schemas',
     'rest_framework.views',
     'outlets',
+    'leaflet',
 ]
 
 REST_FRAMEWORK = {
@@ -51,6 +52,15 @@ REST_FRAMEWORK = {
         'rest_framework.renderers.JSONRenderer',
         'rest_framework.renderers.BrowsableAPIRenderer',
     ),
+}
+
+LEAFLET_CONFIG = {
+    "DEFAULT_CENTER" : (60, -0.09),
+    "DEFAULT_ZOOM" : 10,
+    "MAX_ZOOM" : 20,
+    "MIN_ZOOM" : 3,
+    "SCALE" : 'both',
+    "ATTRIBUTION_PREFIX": "My Custome Leaflet map"
 }
 
 MIDDLEWARE = [
@@ -130,6 +140,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = 'static/'
+
+STATICFILES_DIRS = [
+    BASE_DIR / "outlets/static",
+]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
