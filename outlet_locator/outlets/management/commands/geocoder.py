@@ -5,7 +5,7 @@ from geopy.geocoders import Nominatim
 
 # GEOCODE_API = 'https://geocode.maps.co/search?q='
 GOOGLE_MAPS_API = 'https://maps.googleapis.com/maps/api/geocode/json'
-API_KEY = 'AIzaSyDec4tPPifWEgibtqiSDU40zDjD0NxhPLg'
+API_KEY = ''
 
 def get_geographical_coordinates():
     outlets_without_geodata = Outlet.objects.filter(
