@@ -46,6 +46,14 @@ Endpoint: http://localhost:8000/api/outlets/<state>
 Method: GET  
 Description: Returns information about outlets in a specific state. Replace <state> with one of the following: 'perlis', 'kedah', 'penang', 'kelantan', 'perak', 'terengganu', 'pahang', 'kuala-lumpur-selangor', 'negeri-sembilan', 'melaka', 'johor', 'sabah', 'sarawak'.
 
+## Django Management Commands
+
+The Django app comes with custom management commands to perform specific tasks. Use the following commands as needed:
+
+- **Update Store Coordinates:**
+  - Command: `python manage.py scrape_outlets`
+  - Description: This command updates the coordinates of stores. Run it when you need to refresh the store location data.
+
 ## List of improvements to be made:
 1) Use PostgreSQL instead of SQlite database for more efficient geospatial data storing.
 2) To speed up the web scraping task, could use threading if it takes too long to retrieve data
