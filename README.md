@@ -28,7 +28,7 @@ source venv/bin/activate
 pip install -r requirements.txt
 
 ## Step 4: Run the Django App
-cd outlets
+cd outlets  
 python manage.py runserver
 
 Your Django app should now be running and accessible at http://localhost:8000.
